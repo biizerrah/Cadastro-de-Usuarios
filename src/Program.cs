@@ -1,27 +1,31 @@
 ﻿using CriandoUsuarios.Cadastro;
 
 class Program{
-
- 
+    static Cadastro cadastro = new(); 
     static void Main(){
 
-    Cadastro cadastro = new(); //Instanciando a classe Cadastro para utilizar seu metodos.
+    int parada;
 
-    bool parada = true; //Condição para que o loop while comece a ser executado.
+    do{
+        Console.WriteLine();
+        Console.WriteLine("===============================================");
+        Console.WriteLine(">>>>>>>>>> Escolha uma opção <<<<<<<<<<");    
+        Console.WriteLine("Digite [1] para cadastrar um novo usuário");
+        Console.WriteLine("Digite [2] para listar os usuários");
+        Console.WriteLine("Digite [3] para pesquisar um usuário");
+        Console.WriteLine("Digite [4] para sair");
+        Console.WriteLine("===============================================");
+        parada = int.Parse(Console.ReadLine()); 
 
-    while (parada){
-    Console.WriteLine();
-    Console.WriteLine("===============================================");
-    Console.WriteLine(">>>>>>>>>> Escolha uma opção <<<<<<<<<<");    
-    Console.WriteLine("Digite [1] para cadastrar um novo usuário");
-    Console.WriteLine("Digite [2] para listar os usuários");
-    Console.WriteLine("Digite [3] para pesquisar um usuário");
-    Console.WriteLine("Digite [4] para sair");
-    Console.WriteLine("===============================================");
+       MenuInicial(parada);
 
-    int opcao = int.Parse(Console.ReadLine());
+    } while(parada != 4);
+    
+    }
 
-        switch(opcao){ //Menu de opções para interação com o usuário. Cada "case" chama um metodo. 
+     public static void MenuInicial(int opcao){
+
+        switch(opcao){ 
 
         case 1:
         cadastro.NovoUsuario();
@@ -33,15 +37,11 @@ class Program{
         cadastro.BuscarUsuario();
         break;
         case 4:
-        Console.WriteLine("====================");
-        Console.WriteLine(">>> SAINDO... <<<");
-        Console.WriteLine("====================");
-        parada = false; //Ao receber o valor "false" o loop while para de ser executado
+        cadastro.MensagemSaida();
         break;
-
+        default:
+        Console.WriteLine(">> Opção Iválida! <<");
+        break;
     }
-
- }
-    
     }
 }

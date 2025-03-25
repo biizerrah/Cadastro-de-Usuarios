@@ -90,6 +90,13 @@ public void BuscarUsuario(){
    
     }
 
+    public void MensagemSaida(){
+        
+        Console.WriteLine("====================");
+        Console.WriteLine(">>> SAINDO... <<<");
+        Console.WriteLine("====================");
+    }
+
 }
 
 }
