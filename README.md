@@ -1,5 +1,7 @@
 # Cadastro de Usuários
 
+Esse projeto consiste em um programa de console simples construido em C# usando o framework .NET que permite o o cadastro, listagem de todos os usuários e busca de um usuário especifico por nome.
+
 ## Configuração Recomendada
 
 
@@ -30,3 +32,30 @@ dotnet build
 ~~~
 dotnet run
 ~~~
+
+## Funcionamento do programa
+
+**Menu Inicial**
+
+<img src='./assets/Menu.png' width='350'>
+
+**Cadastrar um usuário - Com os campos: nome, email e idade. Ao cadastrar o usuário atual é possivel continuar cadastrando ou não.**
+
+<img src='./assets/Cadastrar.png' width='350'>
+
+**Listando os usuários cadastrados**
+
+<img src='./assets/Listar.png' width='350'>
+
+**Buscar um usuário por nome**
+
+ - *Consulte a lista de nomes para saber quais usuários estão cadastrados*
+
+<img src='./assets/Buscar.png' width='350'>
+
+
+ - *Após digitar o nome desejado as informações serão impressas no console*
+
+ <img src='./assets/Buscar02.png' width='350'>
+
+
